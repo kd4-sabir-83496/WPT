@@ -1,0 +1,111 @@
+<html>
+<head>
+    <title>Registration</title>
+</head>
+<body>
+   <table border="1" height= "70%" width="70%">
+    <tr>
+        <td>
+            <center>
+            <video width="600px" height="400" controls>
+            <source src="Sunbeam.mp4" type="video/mp4">
+            </video>
+        </center>
+        </td>
+        <td>
+            <table width="50%" height="50%" cellpadding="10px" cellspacing="10px">
+                <center>
+            <h1>Register Form</h1>
+            </center>
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <input type="text" id="txtName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>BirthDate</td>
+                    <td>
+                        <input type="date" required />
+                    </td>
+        
+                </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>
+                            <input type="email" required />
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>Password</td>
+                        <td>
+                            <input type="password" required />
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>Address</td>
+                        <td>
+                            <select name="state" >
+                            <option value="1">Maharashtra</option>
+                            <option value="2">Karnataka</option>
+                            <option value="3">Goa</option>
+                        </select>
+                        
+                            <select name="District" >
+                            <option value="1">Pune</option>
+                            <option value="2">Mumbai</option>
+                            <option value="3">Kolhapur</option>
+                        </select>
+                        
+                            <select name="City" >
+                            <option value="1">Pune</option>
+                            <option value="2">Kolhapur</option>
+                            <option value="3">Gadhinglaj</option>
+                        </select>
+                        </td>
+        
+                    </tr>
+        
+                    <tr>
+                        <td>Gender:</td>
+                        <td>
+                            <input type="radio" name= "gender" value="1" checked /> 
+                            Female <input type="radio" name="gender" value="2" /> 
+                            Male <input type="radio" name="gender" value="3" /> other
+        
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>Upload Photo</td>
+                        <td>
+                            <input type="file" required />
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>Select Your Course</td>
+                        <td>
+                            <select course />
+                            <option value="1" >CDAC</option>
+                            <option value="2" >DBDA</option>
+                            <option value="3" >DAI</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Register"
+                        </td>
+                        <td>
+                            <input type="submit" value="Clear" />
+                        </td>
+                    </tr>
+                
+            </table>
+        </td>
+    </tr>
+   </table>
+</body>
+</html>

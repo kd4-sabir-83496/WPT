@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Car</title>
+    </head>
+    <body>
+        <div
+            style="height: 100; width: 100; position: absolute; top: 0px; left: -30px"
+      id="mydiv">
+      <img src="car.jpg" style="height: 100px; width: 200px;" />
+        </div>
+        <div
+        style="
+        width: 500px;
+        height: 50px;
+        background-color: black;
+        position: absolute;
+        left: 0px;
+        top: 69px;
+        "
+        >
+        </div>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <label for="">X - AXIS</label><input type="number" id="num1" readonly><br><br>
+        <label for="">Y - AXIS</label><input type="number" id="num2" readonly><br><br>
+
+        <input type="button" value="Start" onclick="start()" />
+        <input type="button" value="Stop" onclick="stop()" />
+
+        <script>
+            var vtop=0;
+            var counter = 0;
+            var queueNoArray = new Array();
+
+            var myCar = document.getElementById("mydiv");
+            function start() {
+                var queueNo = window.setInterval(keepCounting, 100);
+                queueNoArray.push(queueNo);
+            }
+
+            function back() {
+                var queueNo1 = window.setInterval(reverse, 100);
+                queueNoArray.push(queueNo1);
+            }
+
+            function stop() {
+                var queueNo = queueNoArray.pop();
+                window.clearInterval(queueNo);
+            }
+
+            function keepCounting(){
+                counter = counter + 1;
+                if(counter < 480) {
+                myCar.style.marginLeft = counter + "px";
+                num1.value = counter;
+            }else{
+                drop();
+            }
+        }  
+            function drop(){
+                counter = counter + 1;
+                vtop = vtop +10;
+                if(counter>480){
+                    if(vtop<400){
+                    var deg;
+                    myCar.style.rotate = "60deg";
+                    myCar.style.top =  vtop +"px";
+                    num2.value = vtop;
+                    }else{
+                    }
+                }else{
+                    
+                }
+            }
+        </script>
+        
+    </body>
+</html>
